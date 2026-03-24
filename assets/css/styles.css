@@ -51,6 +51,7 @@ nav {
 .hamburger span { width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: 0.3s; }
 
 /* ── PAGE HEADER (inner pages) ───────────────────────────── */
+.page-header + section, .page-header + div + section { padding-top: 56px; }
 .page-header {
   min-height: 320px;
   background: linear-gradient(135deg, var(--dark) 0%, var(--navy) 45%, var(--navy2) 100%);
