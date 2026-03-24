@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Legacy Tech Consultancy</title>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">L</div>
+    <div class="nav-logo-text">
+      <div class="brand">Legacy Tech</div>
+      <div class="sub">Consultancy</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="why-us.html">Why Us</a></li>
+    <li><a href="sectors.html">Sectors</a></li>
+    <li><a href="contact.html" class="nav-cta active">Get in Touch</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-header-tag">Contact Us</div>
+    <h1>Let's Build Something Together</h1>
+    <p>Reach out to start a project, request a consultation, or ask a question — we're here to help.</p>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="fade-up">
+        <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:28px;">Get In Touch</h3>
+        <div class="contact-info-item">
+          <div class="ci-icon">📍</div>
+          <div><div class="ci-label">Location</div><div class="ci-value">Monrovia, Republic of Liberia</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon">📧</div>
+          <div><div class="ci-label">Email</div><div class="ci-value">info@legacytechconsultancy.lr</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon">📞</div>
+          <div><div class="ci-label">Phone</div><div class="ci-value">+231 886 501 403</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon">🌐</div>
+          <div><div class="ci-label">Website</div><div class="ci-value">www.legacytechconsultancy.lr</div></div>
+        </div>
+        <div style="margin-top:32px;padding:24px;background:var(--offwhite);border-radius:10px;border-left:3px solid var(--gold);">
+          <div style="font-weight:600;color:var(--navy);margin-bottom:8px;">Office Hours</div>
+          <div style="font-size:13.5px;color:var(--gray);line-height:1.8;">
+            Monday – Friday: 8:00 AM – 6:00 PM (WAT)<br/>
+            Saturday: 9:00 AM – 2:00 PM<br/>
+            Available for urgent consultations by appointment
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:28px;">Send Us a Message</h3>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Full Name" required/>
+            <input type="email" name="email" placeholder="Email Address" required/>
+          </div>
+          <input type="text" name="organization" placeholder="Organization / Company"/>
+          <select name="service">
+            <option value="" disabled selected>Select Service of Interest</option>
+            <option>Cybersecurity Services</option>
+            <option>Digital Forensics</option>
+            <option>IT Infrastructure &amp; Networking</option>
+            <option>Software Development</option>
+            <option>Digital Transformation Advisory</option>
+            <option>Telecommunications Consulting</option>
+            <option>Cloud Solutions</option>
+            <option>AI &amp; Data Advisory</option>
+            <option>Multiple Services / General Inquiry</option>
+          </select>
+          <textarea name="message" placeholder="Describe your project or inquiry..."></textarea>
+          <button type="submit" class="form-submit" id="submitBtn">Send Message &rarr;</button>
+          <div class="form-note">We respond within 24 business hours.</div>
+          <div class="success-msg" id="successMsg">✅ Your message has been received. We'll be in touch shortly!</div>
+          <div class="success-msg" id="errorMsg" style="background:#FFF5F5;border-color:#FC8181;color:#9B2C2C;">❌ Something went wrong. Please try again or email us directly.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <div style="width:36px;height:36px;background:linear-gradient(135deg,var(--navy2),var(--blue));border:1.5px solid var(--gold);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--gold);">L</div>
+          <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#fff;">Legacy Tech Consultancy</div>
+        </div>
+        <div class="tagline">Technology with Purpose. Solutions that Last.<br/>Monrovia, Republic of Liberia.</div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Cybersecurity</a>
+        <a href="services.html">Digital Forensics</a>
+        <a href="services.html">IT Infrastructure</a>
+        <a href="services.html">Software Development</a>
+        <a href="services.html">Cloud Solutions</a>
+      </div>
+      <div class="footer-col">
+        <h4>Advisory</h4>
+        <a href="services.html">Digital Transformation</a>
+        <a href="services.html">Telecom Consulting</a>
+        <a href="services.html">AI &amp; Data Advisory</a>
+        <a href="sectors.html">Sectors Served</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="why-us.html">Why Choose Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="copy">&copy; 2026 Legacy Tech Consultancy. All rights reserved. Monrovia, Liberia.</div>
+      <div style="color:var(--gold);font-size:12px;font-style:italic;">"Technology with Purpose. Solutions that Last."</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

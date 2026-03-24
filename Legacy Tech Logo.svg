@@ -1,0 +1,74 @@
+<svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B2A4A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#253B63;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#C9A84C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8C96A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="circuitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90D9;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2A6BAA;stop-opacity:0.6" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Shield / Emblem background -->
+  <path d="M75,12 L120,12 L138,32 L138,85 C138,112 107,132 97.5,137 C88,132 57,112 57,85 L57,32 Z"
+        fill="url(#shieldGrad)" filter="url(#softShadow)"/>
+
+  <!-- Shield inner border accent -->
+  <path d="M75,17 L120,17 L133,34 L133,84 C133,108 105,127 97.5,132 C90,127 62,108 62,84 L62,34 Z"
+        fill="none" stroke="url(#accentGrad)" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- Circuit board lines inside shield -->
+  <g stroke="url(#circuitGrad)" stroke-width="1" fill="none" opacity="0.5">
+    <line x1="75" y1="45" x2="90" y2="45"/>
+    <line x1="90" y1="45" x2="90" y2="55"/>
+    <line x1="90" y1="55" x2="110" y2="55"/>
+    <line x1="110" y1="45" x2="120" y2="45"/>
+    <line x1="110" y1="55" x2="110" y2="70"/>
+    <line x1="100" y1="70" x2="115" y2="70"/>
+    <line x1="80" y1="65" x2="80" y2="75"/>
+    <line x1="80" y1="75" x2="95" y2="75"/>
+    <circle cx="90" cy="45" r="2" fill="#4A90D9" stroke="none" opacity="0.8"/>
+    <circle cx="110" cy="55" r="2" fill="#4A90D9" stroke="none" opacity="0.8"/>
+    <circle cx="80" cy="75" r="2" fill="#C9A84C" stroke="none" opacity="0.9"/>
+    <circle cx="100" cy="70" r="2" fill="#4A90D9" stroke="none" opacity="0.8"/>
+  </g>
+
+  <!-- Central "L" monogram -->
+  <text x="97.5" y="105" text-anchor="middle" font-family="Georgia, serif" font-size="38"
+        font-weight="bold" fill="url(#accentGrad)" filter="url(#glow)" letter-spacing="-1">L</text>
+
+  <!-- Horizontal gold accent bar under L -->
+  <rect x="82" y="110" width="31" height="2.5" fill="url(#accentGrad)" rx="1.25"/>
+
+  <!-- ====== COMPANY NAME ====== -->
+  <!-- LEGACY -->
+  <text x="158" y="62" font-family="Georgia, 'Times New Roman', serif" font-size="38"
+        font-weight="bold" fill="#1B2A4A" letter-spacing="2">LEGACY</text>
+
+  <!-- TECH -->
+  <text x="158" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="38"
+        font-weight="bold" fill="url(#accentGrad)" letter-spacing="2">TECH</text>
+
+  <!-- Thin accent line between LEGACY and TECH -->
+  <rect x="158" y="107" width="280" height="2" fill="url(#accentGrad)" rx="1"/>
+
+  <!-- CONSULTANCY -->
+  <text x="158" y="130" font-family="'Trebuchet MS', Arial, sans-serif" font-size="16"
+        fill="#253B63" letter-spacing="5.5" font-weight="normal">CONSULTANCY</text>
+
+  <!-- Tagline -->
+  <text x="158" y="150" font-family="'Trebuchet MS', Arial, sans-serif" font-size="10.5"
+        fill="#C9A84C" letter-spacing="1.5" font-style="italic">Technology with Purpose. Solutions that Last.</text>
+</svg>
