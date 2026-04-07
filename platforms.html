@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Platforms | Legacy Tech Consultancy</title>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <style>
+    .platform-hero {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--navy) 50%, #1a3a5c 100%);
+      padding: 110px 5% 52px;
+      position: relative;
+      overflow: hidden;
+    }
+    .platform-hero::before {
+      content: '';
+      position: absolute; inset: 0; opacity: 0.04;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px),
+        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px);
+    }
+    .platform-hero-glow {
+      position: absolute; top: -20%; right: -5%; width: 55%; height: 120%;
+      background: radial-gradient(ellipse at center, rgba(201,168,76,0.09) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .platform-hero-content {
+      position: relative; z-index: 2; max-width: 1200px; margin: 0 auto;
+    }
+    .platform-block {
+      padding: 80px 5%;
+    }
+    .platform-block:nth-child(even) {
+      background: var(--offwhite);
+    }
+    .platform-block:nth-child(odd) {
+      background: #fff;
+    }
+    .platform-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+    }
+    .platform-inner.reverse { direction: rtl; }
+    .platform-inner.reverse > * { direction: ltr; }
+    .platform-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      border-radius: 20px; padding: 5px 16px; margin-bottom: 20px;
+      font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    }
+    .badge-live {
+      background: rgba(74,222,128,0.12); border: 1px solid rgba(74,222,128,0.3); color: #4ade80;
+    }
+    .badge-dev {
+      background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.3); color: #f59e0b;
+    }
+    .platform-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 3vw, 38px); font-weight: 700;
+      color: var(--navy); line-height: 1.2; margin-bottom: 8px;
+    }
+    .platform-subtitle {
+      font-size: 14px; color: var(--blue); font-weight: 600;
+      letter-spacing: 0.5px; margin-bottom: 16px;
+    }
+    .platform-desc {
+      font-size: 15.5px; color: #3A4A6A; line-height: 1.85; margin-bottom: 24px;
+    }
+    .feature-list {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 32px;
+    }
+    .feature-item {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; color: var(--navy); font-weight: 500;
+    }
+    .feature-item::before {
+      content: ''; width: 7px; height: 7px;
+      background: var(--gold); border-radius: 50%; flex-shrink: 0;
+    }
+    .platform-visual {
+      background: linear-gradient(135deg, var(--dark), var(--navy2));
+      border-radius: 16px; padding: 40px;
+      border: 1px solid rgba(201,168,76,0.2);
+      box-shadow: 0 24px 64px rgba(27,42,74,0.18);
+      position: relative; overflow: hidden;
+    }
+    .platform-visual::before {
+      content: ''; position: absolute; top: -30%; right: -20%;
+      width: 70%; height: 100%;
+      background: radial-gradient(ellipse, rgba(201,168,76,0.1) 0%, transparent 70%);
+    }
+    .visual-icon { font-size: 56px; margin-bottom: 20px; position: relative; z-index: 1; }
+    .visual-title {
+      font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700;
+      color: #fff; margin-bottom: 8px; position: relative; z-index: 1;
+    }
+    .visual-desc { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.7; position: relative; z-index: 1; }
+    .visual-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; position: relative; z-index: 1; }
+    .visual-tag {
+      font-size: 11px; background: rgba(201,168,76,0.15);
+      color: var(--gold); padding: 4px 12px; border-radius: 12px; font-weight: 600;
+    }
+    .visual-tag.dim {
+      background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.4);
+    }
+    .platform-cta-strip {
+      background: var(--navy); padding: 72px 5%; text-align: center;
+    }
+    @media (max-width: 768px) {
+      .platform-inner { grid-template-columns: 1fr; gap: 40px; }
+      .platform-inner.reverse { direction: ltr; }
+      .feature-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">L</div>
+    <div class="nav-logo-text">
+      <div class="brand">Legacy Tech</div>
+      <div class="sub">Consultancy</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="platforms.html" class="active">Platforms</a></li>
+    <li><a href="why-us.html">Why Us</a></li>
+    <li><a href="sectors.html">Sectors</a></li>
+    <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="platform-hero">
+  <div class="platform-hero-glow"></div>
+  <div class="platform-hero-content">
+    <div class="page-header-tag">Our Platforms</div>
+    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,54px);font-weight:900;color:#fff;line-height:1.15;margin-bottom:16px;">We Don't Just Consult.<br/><span style="color:var(--gold);">We Build.</span></h1>
+    <p style="font-size:16px;color:rgba(255,255,255,0.65);max-width:580px;line-height:1.8;">Legacy Tech Consultancy develops and deploys real-world digital platforms that address critical challenges in education and healthcare across Liberia and West Africa.</p>
+    <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:8px;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25);border-radius:20px;padding:6px 16px;">
+        <span style="width:7px;height:7px;background:#4ade80;border-radius:50%;display:inline-block;animation:pulse 2s infinite;"></span>
+        <span style="font-size:11px;color:#4ade80;font-weight:600;letter-spacing:1px;">1 Platform Live</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.2);border-radius:20px;padding:6px 16px;">
+        <span style="width:7px;height:7px;background:#f59e0b;border-radius:50%;display:inline-block;"></span>
+        <span style="font-size:11px;color:#f59e0b;font-weight:600;letter-spacing:1px;">1 Platform In Development</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PLATFORM 1 — WASSCEPrep -->
+<div class="platform-block">
+  <div class="platform-inner">
+    <div>
+      <div class="platform-badge badge-live">
+        <span style="width:6px;height:6px;background:#4ade80;border-radius:50%;display:inline-block;animation:pulse 2s infinite;"></span>
+        Live &amp; Available
+      </div>
+      <div class="platform-title">WASSCEPrep</div>
+      <div class="platform-subtitle">Liberia WASSCE Exam Preparation Platform</div>
+      <div class="gold-line"></div>
+      <p class="platform-desc">WASSCEPrep is an AI-powered online platform built specifically for Liberian students preparing for the West African Senior School Certificate Examination (WASSCE). It combines intelligent tutoring, exam simulations, and structured learning tools to give every student a real advantage — regardless of where they are in Liberia.</p>
+      <p class="platform-desc" style="margin-top:-8px;">The platform is live, actively tested, and going into full public launch this month.</p>
+      <div class="feature-list">
+        <div class="feature-item">AI-Powered Tutoring</div>
+        <div class="feature-item">Full Exam Simulations</div>
+        <div class="feature-item">Subject Question Banks</div>
+        <div class="feature-item">Flashcards &amp; Revision Tools</div>
+        <div class="feature-item">Performance Analytics</div>
+        <div class="feature-item">Mobile Friendly</div>
+        <div class="feature-item">WASSCE Curriculum-Aligned</div>
+        <div class="feature-item">Scalable for Schools</div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="https://wassceprep.netlify.app/" target="_blank" class="btn-primary">View Live Platform →</a>
+        <a href="contact.html" class="btn-secondary" style="color:var(--navy);border-color:var(--navy);">Partner with Us</a>
+      </div>
+    </div>
+    <div class="platform-visual">
+      <div class="visual-icon">🎓</div>
+      <div class="visual-title">WASSCEPrep</div>
+      <div style="font-size:12px;color:var(--gold);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">Education Technology</div>
+      <div class="visual-desc">AI-driven exam preparation for Liberian WASSCE students. Practice exams, intelligent feedback, and structured revision — accessible anywhere.</div>
+      <div class="visual-tags">
+        <span class="visual-tag">AI Tutoring</span>
+        <span class="visual-tag">WASSCE</span>
+        <span class="visual-tag">Ed-Tech</span>
+        <span class="visual-tag">West Africa</span>
+      </div>
+      <div style="margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);">
+        <div style="font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;">Platform Status</div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="flex:1;height:4px;background:rgba(255,255,255,0.08);border-radius:4px;overflow:hidden;">
+            <div style="width:90%;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:4px;"></div>
+          </div>
+          <span style="font-size:12px;color:var(--gold);font-weight:700;">90% — Going Live</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PLATFORM 2 — Telehealth -->
+<div class="platform-block">
+  <div class="platform-inner reverse">
+    <div>
+      <div class="platform-badge badge-dev">
+        <span style="width:6px;height:6px;background:#f59e0b;border-radius:50%;display:inline-block;animation:pulse 2s infinite;"></span>
+        Early Demo Available
+      </div>
+      <div class="platform-title">Telehealth Platform</div>
+      <div class="platform-subtitle">Digital Health System for Liberia</div>
+      <div class="gold-line"></div>
+      <p class="platform-desc">Our Telehealth Platform is a comprehensive digital health solution designed for Liberia's healthcare system — enabling virtual patient-doctor consultations, secure electronic health records, appointment management, and clinical workflow automation for clinics, hospitals, and public health programs.</p>
+      <p class="platform-desc" style="margin-top:-8px;">An early demo is now available. The platform is approximately 30% complete with all core navigation and flows working. Healthcare providers and institutions can register interest to be part of the early access program.</p>
+      <div class="feature-list">
+        <div class="feature-item">Virtual Consultations</div>
+        <div class="feature-item">Patient Record Management</div>
+        <div class="feature-item">Appointment Scheduling</div>
+        <div class="feature-item">Secure Health Data</div>
+        <div class="feature-item">Clinical Dashboards</div>
+        <div class="feature-item">Multi-provider Support</div>
+        <div class="feature-item">HIPAA-aligned Security</div>
+        <div class="feature-item">Offline-capable Design</div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="https://demohealthbridge.netlify.app/" target="_blank" class="btn-primary">View Early Demo →</a>
+        <a href="contact.html" class="btn-secondary" style="color:var(--navy);border-color:rgba(27,42,74,0.3);">Register Interest</a>
+      </div>
+    </div>
+    <div class="platform-visual">
+      <div class="visual-icon">🏥</div>
+      <div class="visual-title">Telehealth Platform</div>
+      <div style="font-size:12px;color:rgba(251,191,36,0.8);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">Health Technology</div>
+      <div class="visual-desc">A full digital health platform purpose-built for Liberia's healthcare landscape — secure, accessible, and designed to work in low-bandwidth environments.</div>
+      <div class="visual-tags">
+        <span class="visual-tag dim">Virtual Care</span>
+        <span class="visual-tag dim">EHR</span>
+        <span class="visual-tag dim">Health-Tech</span>
+        <span class="visual-tag dim">Liberia</span>
+      </div>
+      <div style="margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);">
+        <div style="font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;">Development Progress</div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="flex:1;height:4px;background:rgba(255,255,255,0.08);border-radius:4px;overflow:hidden;">
+            <div style="width:30%;height:100%;background:linear-gradient(90deg,#f59e0b,#fcd34d);border-radius:4px;"></div>
+          </div>
+          <span style="font-size:12px;color:#f59e0b;font-weight:700;">~30% — Early Demo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PARTNER CTA -->
+<div class="platform-cta-strip">
+  <div class="section-inner">
+    <div style="font-size:11px;font-weight:700;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;">Institutions &amp; Partners</div>
+    <h2 style="color:#fff;margin-bottom:16px;font-family:'Playfair Display',serif;">Interested in Our Platforms?</h2>
+    <p style="color:rgba(255,255,255,0.65);font-size:16px;max-width:520px;margin:0 auto 32px;line-height:1.75;">Whether you're a school looking to deploy WASSCEPrep or a healthcare provider wanting early access to our Telehealth system — let's talk.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="https://wassceprep.netlify.app/" target="_blank" class="btn-primary">View WASSCEPrep Demo</a>
+      <a href="https://demohealthbridge.netlify.app/" target="_blank" class="btn-secondary">View Telehealth Demo</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <div style="width:36px;height:36px;background:linear-gradient(135deg,var(--navy2),var(--blue));border:1.5px solid var(--gold);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--gold);">L</div>
+          <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#fff;">Legacy Tech Consultancy</div>
+        </div>
+        <div class="tagline">Technology with Purpose. Solutions that Last.<br/>Monrovia, Republic of Liberia.</div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Cybersecurity</a>
+        <a href="services.html">Digital Forensics</a>
+        <a href="services.html">IT Infrastructure</a>
+        <a href="services.html">Software Development</a>
+        <a href="services.html">Cloud Solutions</a>
+      </div>
+      <div class="footer-col">
+        <h4>Platforms</h4>
+        <a href="https://wassceprep.netlify.app/" target="_blank">WASSCEPrep</a>
+        <a href="platforms.html">Telehealth (Coming Soon)</a>
+        <a href="sectors.html">Sectors Served</a>
+        <a href="services.html">Advisory Services</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="why-us.html">Why Choose Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="copy">&copy; 2026 Legacy Tech Consultancy. All rights reserved. Monrovia, Liberia.</div>
+      <div style="color:var(--gold);font-size:12px;font-style:italic;">"Technology with Purpose. Solutions that Last."</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

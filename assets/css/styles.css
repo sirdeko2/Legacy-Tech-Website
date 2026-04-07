@@ -53,10 +53,10 @@ nav {
 /* ── PAGE HEADER (inner pages) ───────────────────────────── */
 .page-header + section, .page-header + div + section { padding-top: 56px; }
 .page-header {
-  min-height: 320px;
+  min-height: 220px;
   background: linear-gradient(135deg, var(--dark) 0%, var(--navy) 45%, var(--navy2) 100%);
   display: flex; align-items: center;
-  padding: 130px 5% 64px;
+  padding: 100px 5% 44px;
   position: relative; overflow: hidden;
 }
 .page-header::before {
@@ -225,4 +225,24 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 60px 5%
   .form-row { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr; }
   .hero-stats { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ── PLATFORMS PAGE ───────────────────────────────────────── */
+.platform-block .btn-secondary {
+  color: var(--navy) !important;
+  border-color: rgba(27,42,74,0.3) !important;
+}
+.platform-block .btn-secondary:hover {
+  border-color: var(--navy) !important;
+  color: var(--navy) !important;
+}
+
+/* Nav active state for platforms */
+.nav-links a[href="platforms.html"].active { color: var(--gold); }
+
+/* Platforms section on homepage responsive */
+@media (max-width: 768px) {
+  section > .section-inner > div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
 }
